@@ -1,0 +1,85 @@
+header {
+	padding:25px 0;
+	background-color: transparent;
+	z-index: 20;
+	@include media-breakpoint-up(md) {
+		padding:35px 15px;
+	}
+	&.scrolled {
+		box-shadow: -3px -3px 6px 8px rgba(0, 0, 0, 0.05);
+		background-color: $headerbg;
+		transition: 0.25s linear;
+		padding:10px 0;
+		@include media-breakpoint-up(md) {
+			padding:15px;
+		}
+		.header-logo{
+			opacity: 0;
+			&.center{
+				transform: translateX(-50%);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+.header-logo{
+	position: relative;
+	transition: 0.25s linear;
+	&.center{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+		svg{
+			@include media-breakpoint-down(md) {
+				width: 60px;
+			}
+		}
+	}
+}
+
+.header-logo img,
+.header-logo svg {
+	transition: 0.25s linear;
+	// Inverts the logo colour. You could use the filter options to modify a transparent png logo for the different colour header bg.
+	// filter: invert(1);
+
+	// Default to small scrolled size on mobile
+	width: 72px;
+
+	// Turn on the header resize on desktop
+	@include media-breakpoint-up(md) {
+		width: $header-starting-width;
+	}
+	.scrolled & {
+		// filter: none;
+		// Turn on the header resize on desktop
+		@include media-breakpoint-up(md) {
+			width: $header-scrolled-width;
+		}
+	}
+}
+
+.header-phone {
+	line-height: 1.2;
+
+	.phone-icon {
+		img,
+		svg {
+			max-width: 35px;
+			width: 100%;
+		}
+	}
+
+	// Got questions (if it exists)
+	// span {
+
+	// }
+	// Phone number text
+	em {
+		font-style: normal;
+		font-weight: bold;
+	}
+}

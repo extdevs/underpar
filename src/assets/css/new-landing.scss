@@ -1,0 +1,443 @@
+.two-column{
+	h2{
+		margin: 0 0 30px;
+		padding-top: 0;
+		@include media-breakpoint-up(lg) {
+			margin: 0 0 45px;
+		}
+		&.indent{
+			@include media-breakpoint-up(md) {
+				margin-bottom: 75px;
+			}
+			@include media-breakpoint-up(lg) {
+				margin: 0 0 45px;
+			}
+		}
+	}
+	&.your-goal{
+		padding-top: 0;
+		@include media-breakpoint-down(md) {
+			padding-bottom: 45px;
+		}
+		.right-indent{
+			@include media-breakpoint-up(xl) {
+				margin-left: -50px;
+				padding-right: 50px;
+			}
+		}
+	}
+	&.guaranteed{
+		@include media-breakpoint-up(lg) {
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+		.img-holder{
+			margin: 0 -65px -40px;
+			@include media-breakpoint-up(md) {
+				margin: -35px -70px 0 -40px;
+			}
+			@include media-breakpoint-up(xl) {
+				margin: 0 -80px 0 -40px;
+			}
+		}
+		.text-left{
+			padding-left: 55px;
+		}
+	}
+	p{
+		margin: 0 0 30px;
+	}
+	&.testimonials{
+		position: relative;
+		background: url(../assets/images/bg-testimonials.jpg);
+		background-size: cover;
+		position: relative;
+		padding-bottom: 60px;
+		@include media-breakpoint-down(md) {
+			padding-top: 55px;
+			padding-bottom: 30px;
+		}
+		&:before{
+			background: #859D7E;
+			opacity: 0.4;
+			filter: blur(150px);
+			transform: rotate(16.15deg);
+			position: absolute;
+			top: 0;
+			right: 0;
+			content: '';
+			width: 347px;
+			height: 412px;
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+		}
+		.main-heading{
+			text-align: center;
+			color:$white;
+			padding-bottom: 40px;
+			@include media-breakpoint-up(md) {
+				padding-bottom: 70px;
+			}
+			h2{
+				@include media-breakpoint-up(lg) {
+					padding: 0 30px;
+				}
+			}
+			.stars{
+				display: flex;
+				justify-content: center;
+				@include media-breakpoint-up(down) {
+					margin-bottom: 25px;
+				}
+				svg{
+					@include media-breakpoint-up(down) {
+						width: 30px;
+					}
+				}
+			}
+		}
+		.quote-holder{
+			margin-bottom: 50px; 
+			@include media-breakpoint-up(md) {
+				margin-bottom: 75px; 
+			}
+		}
+		.quote-box{
+			background: $white;
+			border-radius: 21px;
+			padding:45px 25px 90px;
+			flex-grow: 1;
+			width: 100%;
+			position: relative;
+			@include media-breakpoint-up(md) {
+				padding:70px 25px 105px;
+				min-height: 333px;
+			}
+			p{
+				@include media-breakpoint-up(down) {
+					margin-bottom: 15px;
+				}
+			}
+			
+			.quote-icon{
+				position: absolute;
+				top: -20px;
+				left: 18px;
+				width: 80px;
+				@include media-breakpoint-up(md) {
+					width: 127px; 
+					top: -30px;
+				}
+				svg{ 
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+			}
+		}
+		.quote-footer{
+			padding:20px 0 30px; 
+			border-top: 1px solid rgba(0,0,0,0.1);
+			align-items: center;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 90%;
+			@include media-breakpoint-up(md) {
+				padding:25px 0 40px; 
+			}
+			.stars{
+				display: flex;
+				padding-bottom: 10px;
+				svg{
+					@include media-breakpoint-down(md) {
+						width: 16px;
+					}
+				}
+			}
+		}
+		.name{
+			font-family: $kalam-font;
+			font-size: 18px;
+			line-height: 1.15;
+			@include media-breakpoint-up(md) {
+				font-size: 22px;
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: 29px;
+			}
+		}
+	}
+	&.visual{
+		padding: 120px 0 20px;
+		background: linear-gradient(to bottom, #ecf0eb 0%,#ecf0eb 50%,#ffffff 100%);
+		@include media-breakpoint-up(md) {
+			background: linear-gradient(45deg, rgba(236,239,235,1) 0%,rgba(249,249,249,1) 50%,rgba(229,233,228,1) 100%);
+			padding: 160px 0 70px;
+		}
+		h1{
+			line-height: 1.15;
+			font-weight: 400;
+			margin-bottom: 30px;
+			@include media-breakpoint-up(lg) {
+				font-size: 48px;
+				margin-bottom: 35px;
+			}
+		}
+		p{
+			margin-bottom: 10px;
+			@include media-breakpoint-up(md) {
+				margin-bottom: 50px;
+			}
+		}
+		.icon-holder{
+			max-width: 35px;
+			flex-shrink: 0;
+			margin-right: 15px;
+			@include media-breakpoint-up(md) {
+				max-width: 49px;
+			}
+			svg{
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+		.image-holder{
+			margin: 0 -25px -35px;
+			@include media-breakpoint-up(lg) {
+				margin: -35px -170px 0 0;
+			}
+			@include media-breakpoint-up(xl) {
+				margin:-85px -70px 0 -37px;
+			}
+		}
+		.info-columns{
+			padding-top: 20px;
+			@include media-breakpoint-up(lg) {
+				padding-left: 75px;
+				padding-right: 89px;
+				padding-top: 35px;
+			}
+		}
+		.info-col{
+			&:nth-child(2){
+				@include media-breakpoint-up(lg) {
+					padding-left: 70px;
+				}
+			}
+			p{
+				margin: 0;
+			}
+		}
+	}
+	.textblock{
+		@include media-breakpoint-up(xl) {
+			padding-right: 33px;
+		}
+		p{ 
+			@include media-breakpoint-up(xl) {
+				padding-right: 100px;
+			}
+		}
+	}
+	.img-holder{
+		position: relative;
+		&.overlays{
+			padding: 0 30px;
+			@include media-breakpoint-up(md) {
+				padding: 0;
+			}
+		}
+		.info-text{
+			position: absolute;
+			top: 15px;
+			left: -5px;
+			min-height: 37px;
+			border-radius: 12px;
+			background: $primary;
+			color:$white;
+			padding: 10px 12px;
+			flex-flow: row nowrap;
+			font-size: 10px;
+			@include media-breakpoint-up(md) {
+				min-height: 82px;
+				top: -50px;
+				left: -50px;
+				font-size: 18px;
+				padding: 15px 30px;
+			}
+			@include media-breakpoint-up(lg) {
+				border-radius: 20px;
+				font-size: 20px;
+				padding: 20px 30px;
+			}
+
+			&.drills{
+				background: $light-gray;
+				color:$black;
+				font-size: 10px;
+				left: auto;
+				right: -5px;
+				top: auto;
+				bottom: 40px;
+				@include media-breakpoint-up(md) {
+					right: -30px;
+					font-size: 18px;
+					bottom: 70px;
+				}
+				@include media-breakpoint-up(lg) {
+					font-size: 24px;
+					right: -50px;
+					top: auto;
+					bottom: 40px;
+				}
+			}
+		}
+		.icon{
+			flex-shrink: 0;
+			width: 15px;
+			@include media-breakpoint-up(md) {
+				width: auto;
+			}
+			svg{
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+		.txt{
+			flex-grow: 1;
+			padding-left: 10px;
+		}
+	}
+	.info-right-col{
+		@include media-breakpoint-up(lg) {
+			padding-left: 80px;
+		}	
+	}
+	.info-left-col{
+		@include media-breakpoint-up(lg) {
+			padding-right: 80px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding-right: 130px;
+		}
+	}
+}
+
+.single-column{
+	background: linear-gradient(45deg, rgba(236,239,235,1) 0%,rgba(249,249,249,1) 50%,rgba(229,233,228,1) 100%);
+	&.approach{
+		padding-top: 30px;
+		padding-bottom: 20px;
+		@include media-breakpoint-up(md) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding-top: 70px;
+			padding-bottom: 90px;
+		}
+		h2{
+			margin-bottom: 40px;
+		}
+		.styled-list{
+			position: relative;
+			margin-bottom: 15px;
+			@include media-breakpoint-up(md) {
+				margin-bottom: 30px;
+			}
+			li{
+				position: relative;
+				margin: 0;
+				padding: 0 0 20px;
+				&:first-child{
+					
+				}
+				&:last-child{
+					.icon{
+						&:before{
+							display: none;
+						}
+					}
+				}
+			}
+			svg{
+				path{
+					background: red;
+				}
+			}
+			.holder{
+				background: $white;
+				padding: 20px;
+				border-radius: 20px;
+				align-items: center;
+				font-size: 14px;
+				@include media-breakpoint-up(md) {
+					min-height: 194px;
+					font-size: 18px;
+					padding: 30px 50px 30px 130px;
+				}
+				
+			}
+			strong{
+				font-size: 14px;
+				display: block;
+				font-weight: 700;
+				margin: 0 0 15px;
+				padding-left: 40px;
+				position: relative;
+				@include media-breakpoint-up(md) {
+					margin: 0 0 10px;
+					font-size: 22px;
+					padding-left: 0;
+					position: static; 
+				}
+			}
+			.icon{
+				background: #f5f7f5;
+				border-radius: 100%;
+				width:30px;
+				height:30px;
+				display: block;
+				flex-shrink: 0;
+				position: absolute;
+				z-index: 2;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				@include media-breakpoint-up(md) {
+					left: 30px;
+					width:74px;
+					height:74px;
+				}
+				&:before{
+					position: absolute;
+					top: 72px;
+					left: 37px;
+					bottom: 0;
+					min-height: 138px;
+					content: '';
+					width: 5px;
+					background: url(../assets/images/bar.png)  repeat-y;
+					z-index: -1;
+					display: none;
+					@include media-breakpoint-up(md) {
+						display: block;
+					}
+				}
+			}
+			
+			svg{
+				display: block;
+				max-width: 30px;
+				@include media-breakpoint-up(md) {
+					max-width: 74px;
+				}
+			}
+		}
+	}
+}

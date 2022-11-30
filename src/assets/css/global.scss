@@ -1,0 +1,276 @@
+// --------------------
+// GLOBAL COMPONENTS
+//---------------------
+
+// Generic Section Padding - adds padding to each section - most of your sections should use this - override for special cases
+section {
+	padding: 30px 0px;
+	position: relative;
+	overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+		padding: 40px 0px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: 80px 0px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		padding: 120px 0px;
+	}
+
+	&.less-pad {
+		padding: 60px 0;
+	}
+}
+
+.has-border{
+	position: relative;
+	display: inline-block;
+	&:before{
+		position: absolute;
+		bottom: 0; 
+		left: 0;
+		right: 0;
+		content: '';
+		background: linear-gradient(270.23deg, #859D7E 38.04%, rgba(133, 157, 126, 0.19) 102.86%);
+		height: 2px;
+		@include media-breakpoint-up(md) {
+			height: 3px;
+			bottom: -2px; 
+		}
+		@include media-breakpoint-up(lg) {
+			bottom: -5px; 
+		}
+	}
+}
+
+.title-head{
+	color: #859D7E;
+	display: block;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.35;
+	letter-spacing: 0.15em;
+	margin-bottom: 15px;
+	@include media-breakpoint-up(md) {
+		font-size: 16px;
+		line-height: 1.2;
+	}
+}
+
+.btn-holder{
+	max-width: 324px;
+	width: 100%;
+	@include media-breakpoint-up(md) {
+		width: 324px;
+		margin: 0 auto 30px;
+	}
+	@include media-breakpoint-up(lg) {
+		margin: 0;
+	}
+	&.auto{
+		margin: 0 auto;
+	}
+	.btn-prrimary{
+		min-width: 300px;
+		@include media-breakpoint-up(md) {
+			min-width: 324px;
+		}
+	}
+}
+
+// text green bar with caps
+
+.text-section-bar{
+	background: $primary;
+	font-family: $headings-font;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 1.45;
+	font-weight: 400;
+	color:$white;
+	text-align: center;
+	letter-spacing: 0.375em;
+	padding:12px 25px;
+	@include media-breakpoint-up(md) {
+		font-size: 32px;
+		line-height: 1.15;
+		padding:8px 10px;
+	}
+}
+
+// Background Images - positions the background image behind the content in the section
+.background-image-container {
+	overflow: hidden;
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		user-select: none;
+	}
+
+	// Background Overlay - Adds a colour overlay with transparency options
+	&.semi-transparent-bg {
+		&-dark {
+			background: #000;
+
+			img {
+				opacity: 0.6;
+			}
+		}
+
+		&-light {
+			background: #fff;
+
+			img {
+				opacity: 0.4;
+			}
+		}
+	}
+}
+
+// Youtube Video Embeds
+.video-preview-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+
+	iframe,
+	object,
+	embed,
+	img.poster,
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.play-button {
+		width: 100px;
+		position: absolute;
+		left: calc(50% - 50px);
+		top: calc(50% - 40px);
+		padding: 0;
+		margin: 0;
+		border: none;
+		appearance: none;
+		background: none;
+		z-index: 5;
+		transition: 0.8s ease;
+
+		&:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+
+picture > img {
+	max-width: 100%;
+	height: auto;
+}
+
+.max-width-image {
+	width: 100%;
+	max-width: 300px;
+
+	@include media-breakpoint-up(md) {
+		max-width: 400px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		max-width: 100%;
+	}
+}
+
+.container-fluid {
+	max-width: 1750px;
+}
+
+.color {
+	&-primary {
+		color: $primary;
+	}
+
+	&-secondary {
+		color: $secondary;
+	}
+}
+
+a {
+	color: $primary;
+	text-decoration: none;
+
+	&:hover {
+		color: $primary;
+		text-decoration: underline;
+	}
+}
+
+.bg {
+	&-primary {
+		background-color: $primary;
+	}
+
+	&-secondary {
+		background-color: $secondary;
+	}
+
+	&-light {
+		background-color: $light;
+	}
+
+	&-dark {
+		background-color: $dark;
+	}
+}
+
+.render-crisp {
+	/* stylelint-disable value-no-vendor-prefix */
+	image-rendering: -webkit-optimize-contrast;
+	/* stylelint-enable value-no-vendor-prefix */
+}
+
+.d-md-none{
+	@include media-breakpoint-up(md) {
+		display: none;
+	}
+}
+
+.main-heading{
+	h2{
+		font-weight: 400;
+	}
+}
+
+.font-sm{
+	font-size: 12px;
+	line-height: 1.2;
+	@include media-breakpoint-up(md) {
+		font-size: 14px;
+		line-height: 1.35;
+	}
+}
+
+.container{
+	@include media-breakpoint-down(md) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
